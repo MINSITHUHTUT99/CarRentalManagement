@@ -41,6 +41,12 @@ namespace CarRentalManagement.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 
@@ -156,8 +162,8 @@ namespace CarRentalManagement.Migrations
                         {
                             Id = 1,
                             CreatedBy = "System",
-                            DateCreated = new DateTime(2025, 1, 9, 2, 14, 17, 867, DateTimeKind.Local).AddTicks(1945),
-                            DateUpdated = new DateTime(2025, 1, 9, 2, 14, 17, 867, DateTimeKind.Local).AddTicks(1960),
+                            DateCreated = new DateTime(2025, 1, 9, 2, 31, 37, 696, DateTimeKind.Local).AddTicks(3981),
+                            DateUpdated = new DateTime(2025, 1, 9, 2, 31, 37, 696, DateTimeKind.Local).AddTicks(4000),
                             Name = "Black",
                             UpdatedBy = "System"
                         },
@@ -165,8 +171,8 @@ namespace CarRentalManagement.Migrations
                         {
                             Id = 2,
                             CreatedBy = "System",
-                            DateCreated = new DateTime(2025, 1, 9, 2, 14, 17, 867, DateTimeKind.Local).AddTicks(1962),
-                            DateUpdated = new DateTime(2025, 1, 9, 2, 14, 17, 867, DateTimeKind.Local).AddTicks(1963),
+                            DateCreated = new DateTime(2025, 1, 9, 2, 31, 37, 696, DateTimeKind.Local).AddTicks(4002),
+                            DateUpdated = new DateTime(2025, 1, 9, 2, 31, 37, 696, DateTimeKind.Local).AddTicks(4002),
                             Name = "Blue",
                             UpdatedBy = "System"
                         });
