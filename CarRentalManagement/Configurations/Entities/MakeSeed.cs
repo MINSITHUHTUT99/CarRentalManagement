@@ -1,30 +1,33 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CarRentalManagement.Domain;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using CarRentalManagement.Domain;
 
-public class MakeSeed : IEntityTypeConfiguration<Make>
+namespace CarRentalManagement.Configurations.Entities
 {
-    public void Configure(EntityTypeBuilder<Make> builder)
+    public class MakeSeed : IEntityTypeConfiguration<Make>
     {
-        builder.HasData(
-            new Make
-            {
-                Id = 1,
-                Name = "BMW",
-                DateCreated = DateTime.Now,
-                DateUpdated = DateTime.Now,
-                CreatedBy = "System",
-                UpdatedBy = "System"
-            },
-            new Make
-            {
-                Id = 2,
-                Name = "Toyota",
-                DateCreated = DateTime.Now,
-                DateUpdated = DateTime.Now,
-                CreatedBy = "System",
-                UpdatedBy = "System"
-            }
-        );
+        public void Configure(EntityTypeBuilder<Make> builder)
+        {
+            builder.HasData(
+new Make
+{
+    Id = 1,
+    Name = "BMW",
+    DateCreated = DateTime.Now,
+    DateUpdated = DateTime.Now,
+    CreatedBy = "System",
+    UpdatedBy = "System"
+},
+new Make
+{
+    Id = 2,
+    Name = "Toyota",
+    DateCreated = DateTime.Now,
+    DateUpdated = DateTime.Now,
+    CreatedBy = "System",
+    UpdatedBy = "System"
+}
+);
+        }
     }
 }

@@ -1,52 +1,51 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CarRentalManagement.Domain;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using CarRentalManagement.Domain;
 
-public class ModelSeed : IEntityTypeConfiguration<Model>
+namespace CarRentalManagement.Configurations.Entities
 {
-    public void Configure(EntityTypeBuilder<Model> builder)
+    public class ModelSeed : IEntityTypeConfiguration<Model>
     {
-        builder.HasData(
-            new Model
-            {
-                Id = 1,
-                Name = "i4",
-                DateCreated = DateTime.Now,
-                DateUpdated = DateTime.Now,
-                CreatedBy = "System",
-                UpdatedBy = "System",
-                
-            },
-            new Model
-            {
-                Id = 2,
-                Name = "X5",
-                DateCreated = DateTime.Now,
-                DateUpdated = DateTime.Now,
-                CreatedBy = "System",
-                UpdatedBy = "System",
-                
-            },
-            new Model
-            {
-                Id = 3,
-                Name = "Prius",
-                DateCreated = DateTime.Now,
-                DateUpdated = DateTime.Now,
-                CreatedBy = "System",
-                UpdatedBy = "System",
-                
-            },
-            new Model
-            {
-                Id = 4,
-                Name = "C-HR",
-                DateCreated = DateTime.Now,
-                DateUpdated = DateTime.Now,
-                CreatedBy = "System",
-                UpdatedBy = "System",
-                
-            }
-        );
+        public void Configure(EntityTypeBuilder<Model> builder)
+        {
+            builder.HasData(
+new Model
+{
+    Id = 1,
+    Name = "i4",
+    DateCreated = DateTime.Now,
+    DateUpdated = DateTime.Now,
+    CreatedBy = "System",
+    UpdatedBy = "System"
+},
+new Model
+{
+    Id = 2,
+    Name = "X5",
+    DateCreated = DateTime.Now,
+    DateUpdated = DateTime.Now,
+    CreatedBy = "System",
+    UpdatedBy = "System"
+},
+new Model
+{
+    Id = 1,
+    Name = "Pirus",
+    DateCreated = DateTime.Now,
+    DateUpdated = DateTime.Now,
+    CreatedBy = "System",
+    UpdatedBy = "System"
+},
+new Model
+{
+    Id = 1,
+    Name = "C-HR",
+    DateCreated = DateTime.Now,
+    DateUpdated = DateTime.Now,
+    CreatedBy = "System",
+    UpdatedBy = "System"
+}
+);
+        }
     }
 }
